@@ -1,59 +1,184 @@
 [
-  {"nombre":"Hidroituango","tipo":"Hidroeléctrica","capacidad_mw":2400,"lat":7.134444,"lng":-75.661944,"fuente":"EPM / Proyecto Hidroituango"},
-  {"nombre":"Central Hidroeléctrica San Carlos","tipo":"Hidroeléctrica","capacidad_mw":1240,"lat":6.210833,"lng":-74.840556,"fuente":"ISAGEN / Wikipedia"},
-  {"nombre":"Central Hidroeléctrica del Guavio (Alberto Lleras)","tipo":"Hidroeléctrica","capacidad_mw":1213,"lat":4.694300,"lng":-73.508858,"fuente":"ENEL / UPME"},
-  {"nombre":"Central Hidroeléctrica de Chivor","tipo":"Hidroeléctrica","capacidad_mw":1000,"lat":5.166667,"lng":-73.250000,"fuente":"EMGESA / Wikipedia"},
-  {"nombre":"Hidroeléctrica Sogamoso","tipo":"Hidroeléctrica","capacidad_mw":820,"lat":5.716670,"lng":-72.920830,"fuente":"ISAGEN / Wikipedia"},
-  {"nombre":"Porce I","tipo":"Hidroeléctrica","capacidad_mw":300,"lat":6.930000,"lng":-75.140000,"fuente":"EPM / Wikipedia"},
-  {"nombre":"Porce II","tipo":"Hidroeléctrica","capacidad_mw":320,"lat":6.935000,"lng":-75.135000,"fuente":"EPM / Wikipedia"},
-  {"nombre":"Porce III","tipo":"Hidroeléctrica","capacidad_mw":660,"lat":6.938600,"lng":-75.138600,"fuente":"EPM / Wikipedia"},
-  {"nombre":"El Peñol - Guatapé","tipo":"Hidroeléctrica","capacidad_mw":560,"lat":6.320100,"lng":-75.165900,"fuente":"EPM / Wikipedia"},
-  {"nombre":"Central Hidroeléctrica Betania","tipo":"Hidroeléctrica","capacidad_mw":540,"lat":3.860800,"lng":-75.016700,"fuente":"EPM / Wikipedia"},
-  {"nombre":"Central Hidroeléctrica Miel I","tipo":"Hidroeléctrica","capacidad_mw":396,"lat":5.560560,"lng":-74.886670,"fuente":"ISAGEN / Wikipedia"},
-  {"nombre":"Represa El Quimbo","tipo":"Hidroeléctrica","capacidad_mw":400,"lat":2.450610,"lng":-75.562934,"fuente":"EMGESA / Wikipedia"},
-  {"nombre":"Hidroeléctrica Urrá I","tipo":"Hidroeléctrica","capacidad_mw":340,"lat":8.233300,"lng":-75.833300,"fuente":"URRÁ / Wikipedia"},
-  {"nombre":"Hidroeléctrica Salvajina","tipo":"Hidroeléctrica","capacidad_mw":285,"lat":3.480000,"lng":-76.420000,"fuente":"Celsia / Wikipedia"},
-  {"nombre":"Central Hidroeléctrica Playas","tipo":"Hidroeléctrica","capacidad_mw":215,"lat":6.500000,"lng":-75.300000,"fuente":"GEM / registros"},
-  {"nombre":"Hidroeléctrica Calima","tipo":"Hidroeléctrica","capacidad_mw":132,"lat":4.570000,"lng":-76.070000,"fuente":"Registros locales / Wikipedia"},
-  {"nombre":"Central Hidroeléctrica Anchicayá","tipo":"Hidroeléctrica","capacidad_mw":355,"lat":3.450000,"lng":-76.600000,"fuente":"Wikipedia"},
-  {"nombre":"Central Hidroeléctrica La Higuera","tipo":"Hidroeléctrica","capacidad_mw":165,"lat":5.200000,"lng":-73.900000,"fuente":"UPME / registros"},
-  {"nombre":"Central Hidroeléctrica Cajamarca (PCH)","tipo":"Hidroeléctrica","capacidad_mw":150,"lat":4.900000,"lng":-75.200000,"fuente":"Registros locales"},
-  {"nombre":"Central Hidroeléctrica Miraflores (PCH)","tipo":"Hidroeléctrica","capacidad_mw":30,"lat":6.200000,"lng":-72.900000,"fuente":"UPME"},
-  {"nombre":"Central Hidroeléctrica Calderas (PCH)","tipo":"Hidroeléctrica","capacidad_mw":30,"lat":5.000000,"lng":-74.600000,"fuente":"UPME"},
-  {"nombre":"Pequeña Central Hidroeléctrica La Argentina","tipo":"Hidroeléctrica","capacidad_mw":12,"lat":4.800000,"lng":-74.200000,"fuente":"UPME"},
-  {"nombre":"Hidroeléctrica Patía","tipo":"Hidroeléctrica","capacidad_mw":80,"lat":2.800000,"lng":-76.000000,"fuente":"Registros locales"},
-  {"nombre":"Hidroeléctrica La Ye (PCH)","tipo":"Hidroeléctrica","capacidad_mw":8,"lat":5.200000,"lng":-74.500000,"fuente":"UPME"},
-  {"nombre":"Central Hidroeléctrica San Francisco","tipo":"Hidroeléctrica","capacidad_mw":190,"lat":4.200000,"lng":-72.900000,"fuente":"Registros"},
-  {"nombre":"Central Hidroeléctrica Chuza - Calima (cadena)","tipo":"Hidroeléctrica","capacidad_mw":200,"lat":4.570000,"lng":-76.070000,"fuente":"Wikipedia / GEM"},
-  {"nombre":"Conjunto PCHs (varias)","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":4.700000,"lng":-74.000000,"fuente":"UPME"},
-  {"nombre":"Hidroeléctrica El Dique","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":4.100000,"lng":-73.800000,"fuente":"Registros locales"},
-  {"nombre":"Termobarranquilla (TEBSA)","tipo":"Termoeléctrica","capacidad_mw":918,"lat":10.968500,"lng":-74.781300,"fuente":"Operador / XM"},
-  {"nombre":"Termoflores (Barranquilla)","tipo":"Termoeléctrica","capacidad_mw":610,"lat":10.968700,"lng":-74.781000,"fuente":"Operador / GEM"},
-  {"nombre":"Termocandelaria (Cartagena)","tipo":"Termoeléctrica","capacidad_mw":314,"lat":10.391000,"lng":-75.479400,"fuente":"Operador / Wikipedia"},
-  {"nombre":"Termocentro (Palmira)","tipo":"Termoeléctrica","capacidad_mw":272,"lat":3.437200,"lng":-76.523500,"fuente":"ISAGEN"},
-  {"nombre":"Termoguajira (Gecelca)","tipo":"Termoeléctrica","capacidad_mw":709,"lat":11.407000,"lng":-72.146000,"fuente":"GECELCA / registros"},
-  {"nombre":"Termopaipa","tipo":"Termoeléctrica","capacidad_mw":160,"lat":5.500000,"lng":-73.200000,"fuente":"Gensa / registros"},
-  {"nombre":"Termozipa","tipo":"Termoeléctrica","capacidad_mw":235.5,"lat":4.900000,"lng":-74.100000,"fuente":"Wikipedia"},
-  {"nombre":"Termotasajero I","tipo":"Termoeléctrica","capacidad_mw":155,"lat":7.900000,"lng":-72.500000,"fuente":"Registros"},
-  {"nombre":"Planta Ciclo Combinado Gecelca","tipo":"Termoeléctrica","capacidad_mw":330,"lat":10.950000,"lng":-73.250000,"fuente":"GECELCA"},
-  {"nombre":"Planta termoeléctrica Barrancabermeja (varias)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":7.067000,"lng":-73.850000,"fuente":"Operadores"},
-  {"nombre":"Central Termoeléctrica Cerrejón (si aplica)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":11.000000,"lng":-72.600000,"fuente":"Operador / registros"},
-  {"nombre":"Termoeléctricas industriales (varias)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":4.600000,"lng":-74.100000,"fuente":"XM / industria"},
-  {"nombre":"Termoeléctrica El Tablazo (ejemplo)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":3.100000,"lng":-75.600000,"fuente":"Registros"},
-  {"nombre":"Termoeléctrica La Loma (ejemplo)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":8.300000,"lng":-73.500000,"fuente":"GEM / registros"},
-  {"nombre":"Plantas térmicas menores de respaldo (varias)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":6.200000,"lng":-75.600000,"fuente":"XM"},
-  {"nombre":"Central Hidroeléctrica Sogamoso (detalle)","tipo":"Hidroeléctrica","capacidad_mw":820,"lat":5.716670,"lng":-72.920830,"fuente":"ISAGEN"},
-  {"nombre":"Porce (complejo)","tipo":"Hidroeléctrica","capacidad_mw":1280,"lat":6.938600,"lng":-75.138600,"fuente":"EPM"},
-  {"nombre":"Central Hidroeléctrica Guatapé (Peñol)","tipo":"Hidroeléctrica","capacidad_mw":560,"lat":6.320100,"lng":-75.165900,"fuente":"EPM"},
-  {"nombre":"Hidroeléctrica Betania (detalle)","tipo":"Hidroeléctrica","capacidad_mw":540,"lat":3.860800,"lng":-75.016700,"fuente":"EPM"},
-  {"nombre":"Hidroeléctrica Salvajina (detalle)","tipo":"Hidroeléctrica","capacidad_mw":285,"lat":3.480000,"lng":-76.420000,"fuente":"Celsia"},
-  {"nombre":"Central Hidroeléctrica Cajicá (PCH ejemplo)","tipo":"Hidroeléctrica","capacidad_mw":10,"lat":4.900000,"lng":-73.900000,"fuente":"UPME"},
-  {"nombre":"Central Hidroeléctrica La Espeja (Betania cadena)","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":3.900000,"lng":-75.020000,"fuente":"EPM"},
-  {"nombre":"Central Hidroeléctrica Salvajina - Puntos asociados","tipo":"Hidroeléctrica","capacidad_mw":285,"lat":3.480000,"lng":-76.420000,"fuente":"Celsia"},
-  {"nombre":"Conjunto Hidroeléctrico Río Magdalena (varias)","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":5.000000,"lng":-74.000000,"fuente":"Registros históricos"},
-  {"nombre":"Central Hidroeléctrica Suesca (proyecto)","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":4.900000,"lng":-73.800000,"fuente":"UPME / proyectos"},
-  {"nombre":"Central Hidroeléctrica Miraflores - detalle","tipo":"Hidroeléctrica","capacidad_mw":30,"lat":6.200000,"lng":-72.900000,"fuente":"UPME"},
-  {"nombre":"Pequeñas centrales varias (registro regional)","tipo":"Hidroeléctrica","capacidad_mw":null,"lat":4.700000,"lng":-74.000000,"fuente":"UPME"},
-  {"nombre":"Central Termoeléctrica Cartagena (agregado)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":10.400000,"lng":-75.500000,"fuente":"Registros / industria"},
-  {"nombre":"Central Termoeléctrica Termoboyacá (ejemplo)","tipo":"Termoeléctrica","capacidad_mw":null,"lat":5.400000,"lng":-73.000000,"fuente":"Registros"}
+  {
+    "nombre": "Hidroeléctrica Ituango",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 2400,
+    "lat": 7.258,
+    "lng": -75.667
+  },
+  {
+    "nombre": "Hidroeléctrica San Carlos",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 1240,
+    "lat": 6.182,
+    "lng": -74.993
+  },
+  {
+    "nombre": "Hidroeléctrica Chivor",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 1000,
+    "lat": 4.893,
+    "lng": -73.364
+  },
+  {
+    "nombre": "Hidroeléctrica Guavio",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 1250,
+    "lat": 4.740,
+    "lng": -73.210
+  },
+  {
+    "nombre": "Hidroeléctrica El Quimbo",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 400,
+    "lat": 2.250,
+    "lng": -75.750
+  },
+  {
+    "nombre": "Hidroeléctrica Betania",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 540,
+    "lat": 2.700,
+    "lng": -75.450
+  },
+  {
+    "nombre": "Hidroeléctrica Miel I",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 396,
+    "lat": 5.400,
+    "lng": -74.950
+  },
+  {
+    "nombre": "Hidroeléctrica Porce III",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 660,
+    "lat": 6.817,
+    "lng": -75.083
+  },
+  {
+    "nombre": "Hidroeléctrica Porce II",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 405,
+    "lat": 6.750,
+    "lng": -75.050
+  },
+  {
+    "nombre": "Hidroeléctrica Jaguas",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 170,
+    "lat": 6.373,
+    "lng": -74.992
+  },
+  {
+    "nombre": "Hidroeléctrica Playas",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 205,
+    "lat": 6.380,
+    "lng": -75.050
+  },
+  {
+    "nombre": "Hidroeléctrica Calderas",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 26,
+    "lat": 5.283,
+    "lng": -75.533
+  },
+  {
+    "nombre": "Hidroeléctrica Salvajina",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 270,
+    "lat": 2.777,
+    "lng": -76.631
+  },
+  {
+    "nombre": "Hidroeléctrica Prado",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 55,
+    "lat": 3.750,
+    "lng": -74.950
+  },
+  {
+    "nombre": "Termocandelaria",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 314,
+    "lat": 10.400,
+    "lng": -75.533
+  },
+  {
+    "nombre": "Termobarranquilla (TEBSA)",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 890,
+    "lat": 11.000,
+    "lng": -74.783
+  },
+  {
+    "nombre": "Termocentro",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 260,
+    "lat": 7.083,
+    "lng": -73.133
+  },
+  {
+    "nombre": "Termopaipa IV",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 300,
+    "lat": 5.750,
+    "lng": -72.950
+  },
+  {
+    "nombre": "Termopaipa I, II y III",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 150,
+    "lat": 5.750,
+    "lng": -72.950
+  },
+  {
+    "nombre": "Termosochagota",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 330,
+    "lat": 5.750,
+    "lng": -72.933
+  },
+  {
+    "nombre": "Termotasajero I y II",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 345,
+    "lat": 7.800,
+    "lng": -72.500
+  },
+  {
+    "nombre": "Termoyopal",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 20,
+    "lat": 5.350,
+    "lng": -72.400
+  },
+  {
+    "nombre": "Termoemcali",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 200,
+    "lat": 3.450,
+    "lng": -76.533
+  },
+  {
+    "nombre": "TermoPalmira",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 200,
+    "lat": 3.550,
+    "lng": -76.300
+  },
+  {
+    "nombre": "Termoflores",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 450,
+    "lat": 10.950,
+    "lng": -74.833
+  },
+  {
+    "nombre": "Termocartagena",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 200,
+    "lat": 10.400,
+    "lng": -75.500
+  }
 ]
