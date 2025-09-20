@@ -13,9 +13,6 @@
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f7f9;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
     }
 
     header {
@@ -28,12 +25,11 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      flex: 0 0 auto;
     }
 
     #map {
-      flex: 1 1 auto;
       width: 100%;
+      height: calc(100vh - 70px); /* asegura mapa visible en móvil */
     }
 
     .legend {
@@ -69,18 +65,18 @@
     // Inicializar mapa centrado en Colombia
     const map = L.map("map").setView([4.6, -74.1], 6);
 
-    // Capa de mapa base
+    // Capa base (OpenStreetMap)
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-    // Función para asignar color por tipo
+    // Función para colores según tipo
     function getColor(tipo) {
       return tipo === "Hidroeléctrica" ? "#007bff" : "#ff4d4d";
     }
 
-    // Cargar datos del JSON
+    // Cargar datos desde plants.json
     fetch("plants.json")
       .then((response) => response.json())
       .then((data) => {
@@ -91,7 +87,7 @@
             color: "#333",
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.8,
+            fillOpacity: 0.85,
           }).addTo(map);
 
           circle.bindPopup(
@@ -105,7 +101,7 @@
         console.error("Error cargando plants.json:", err);
       });
 
-    // Agregar leyenda
+    // Leyenda
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function () {
       const div = L.DomUtil.create("div", "legend");
