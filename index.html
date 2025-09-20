@@ -4,14 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centrales Eléctricas de Colombia</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Tahoma, sans-serif;
       background: #f4f7f9;
     }
 
@@ -29,7 +26,8 @@
 
     #map {
       width: 100%;
-      height: calc(100vh - 70px); /* asegura mapa visible en móvil */
+      height: 100dvh; /* móviles modernos */
+      height: calc(100vh - 70px); /* fallback */
     }
 
     .legend {
@@ -62,25 +60,24 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    // Inicializar mapa centrado en Colombia
+    // --- Inicializar mapa ---
     const map = L.map("map").setView([4.6, -74.1], 6);
 
-    // Capa base (OpenStreetMap)
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-    // Función para colores según tipo
+    // --- Color según tipo ---
     function getColor(tipo) {
       return tipo === "Hidroeléctrica" ? "#007bff" : "#ff4d4d";
     }
 
-    // Cargar datos desde plants.json
+    // --- Cargar plantas desde JSON ---
     fetch("plants.json")
-      .then((response) => response.json())
-      .then((data) => {
-        data.forEach((plant) => {
+      .then((res) => res.json())
+      .then((plantsData) => {
+        plantsData.forEach((plant) => {
           const circle = L.circleMarker([plant.lat, plant.lng], {
             radius: 8,
             fillColor: getColor(plant.tipo),
@@ -93,15 +90,13 @@
           circle.bindPopup(
             `<b>${plant.nombre}</b><br>` +
               `Tipo: ${plant.tipo}<br>` +
-              `Capacidad: ${plant.capacidad_MW || plant.capacidad || "No disponible"} MW`
+              `Capacidad: ${plant.capacidad_MW || "No disponible"} MW`
           );
         });
       })
-      .catch((err) => {
-        console.error("Error cargando plants.json:", err);
-      });
+      .catch((err) => console.error("Error cargando plants.json:", err));
 
-    // Leyenda
+    // --- Leyenda ---
     const legend = L.control({ position: "bottomleft" });
     legend.onAdd = function () {
       const div = L.DomUtil.create("div", "legend");
