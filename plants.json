@@ -1,184 +1,219 @@
 [
   {
-    "nombre": "Hidroeléctrica Ituango",
+    "nombre": "Guavio",
     "tipo": "Hidroeléctrica",
-    "capacidad_MW": 2400,
-    "lat": 7.258,
-    "lng": -75.667
+    "capacidad_MW": 1250,
+    "lat": 4.744,
+    "lng": -73.267
   },
   {
-    "nombre": "Hidroeléctrica San Carlos",
+    "nombre": "San Carlos",
     "tipo": "Hidroeléctrica",
     "capacidad_MW": 1240,
-    "lat": 6.182,
+    "lat": 6.183,
     "lng": -74.993
   },
   {
-    "nombre": "Hidroeléctrica Chivor",
+    "nombre": "Chivor",
     "tipo": "Hidroeléctrica",
     "capacidad_MW": 1000,
-    "lat": 4.893,
-    "lng": -73.364
+    "lat": 4.892,
+    "lng": -73.365
   },
   {
-    "nombre": "Hidroeléctrica Guavio",
+    "nombre": "Jaguas",
     "tipo": "Hidroeléctrica",
-    "capacidad_MW": 1250,
-    "lat": 4.740,
-    "lng": -73.210
+    "capacidad_MW": 170,
+    "lat": 6.358,
+    "lng": -75.062
   },
   {
-    "nombre": "Hidroeléctrica El Quimbo",
+    "nombre": "Playas",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 204,
+    "lat": 6.237,
+    "lng": -75.046
+  },
+  {
+    "nombre": "Miel I",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 396,
+    "lat": 5.449,
+    "lng": -74.894
+  },
+  {
+    "nombre": "Porce II",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 405,
+    "lat": 6.944,
+    "lng": -75.091
+  },
+  {
+    "nombre": "Porce III",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 660,
+    "lat": 7.051,
+    "lng": -75.089
+  },
+  {
+    "nombre": "Porce IV",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 400,
+    "lat": 7.200,
+    "lng": -75.100
+  },
+  {
+    "nombre": "Urrá I",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 340,
+    "lat": 8.047,
+    "lng": -76.051
+  },
+  {
+    "nombre": "Betania",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 540,
+    "lat": 2.693,
+    "lng": -75.478
+  },
+  {
+    "nombre": "Calima",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 120,
+    "lat": 3.900,
+    "lng": -76.600
+  },
+  {
+    "nombre": "Anchicayá",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 165,
+    "lat": 3.800,
+    "lng": -76.900
+  },
+  {
+    "nombre": "Salvajina",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 270,
+    "lat": 2.771,
+    "lng": -76.817
+  },
+  {
+    "nombre": "Amoyá",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 80,
+    "lat": 3.583,
+    "lng": -75.667
+  },
+  {
+    "nombre": "Quimbo",
     "tipo": "Hidroeléctrica",
     "capacidad_MW": 400,
     "lat": 2.250,
-    "lng": -75.750
-  },
-  {
-    "nombre": "Hidroeléctrica Betania",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 540,
-    "lat": 2.700,
-    "lng": -75.450
-  },
-  {
-    "nombre": "Hidroeléctrica Miel I",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 396,
-    "lat": 5.400,
-    "lng": -74.950
-  },
-  {
-    "nombre": "Hidroeléctrica Porce III",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 660,
-    "lat": 6.817,
-    "lng": -75.083
-  },
-  {
-    "nombre": "Hidroeléctrica Porce II",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 405,
-    "lat": 6.750,
-    "lng": -75.050
-  },
-  {
-    "nombre": "Hidroeléctrica Jaguas",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 170,
-    "lat": 6.373,
-    "lng": -74.992
-  },
-  {
-    "nombre": "Hidroeléctrica Playas",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 205,
-    "lat": 6.380,
-    "lng": -75.050
-  },
-  {
-    "nombre": "Hidroeléctrica Calderas",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 26,
-    "lat": 5.283,
-    "lng": -75.533
-  },
-  {
-    "nombre": "Hidroeléctrica Salvajina",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 270,
-    "lat": 2.777,
-    "lng": -76.631
-  },
-  {
-    "nombre": "Hidroeléctrica Prado",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 55,
-    "lat": 3.750,
-    "lng": -74.950
+    "lng": -75.500
   },
   {
     "nombre": "Termocandelaria",
     "tipo": "Termoeléctrica",
     "capacidad_MW": 314,
-    "lat": 10.400,
-    "lng": -75.533
+    "lat": 10.391,
+    "lng": -75.479
   },
   {
-    "nombre": "Termobarranquilla (TEBSA)",
+    "nombre": "Termobarranquilla (Tebsa)",
     "tipo": "Termoeléctrica",
     "capacidad_MW": 890,
-    "lat": 11.000,
-    "lng": -74.783
-  },
-  {
-    "nombre": "Termocentro",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 260,
-    "lat": 7.083,
-    "lng": -73.133
+    "lat": 10.963,
+    "lng": -74.796
   },
   {
     "nombre": "Termopaipa IV",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 300,
-    "lat": 5.750,
-    "lng": -72.950
-  },
-  {
-    "nombre": "Termopaipa I, II y III",
-    "tipo": "Termoeléctrica",
     "capacidad_MW": 150,
+    "lat": 5.758,
+    "lng": -73.115
+  },
+  {
+    "nombre": "Termopaipa II",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 164,
     "lat": 5.750,
-    "lng": -72.950
+    "lng": -73.100
   },
   {
-    "nombre": "Termosochagota",
+    "nombre": "Termozipa",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 330,
-    "lat": 5.750,
-    "lng": -72.933
+    "capacidad_MW": 236,
+    "lat": 4.755,
+    "lng": -74.168
   },
   {
-    "nombre": "Termotasajero I y II",
+    "nombre": "Termocentro",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 345,
-    "lat": 7.800,
-    "lng": -72.500
-  },
-  {
-    "nombre": "Termoyopal",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 20,
-    "lat": 5.350,
-    "lng": -72.400
+    "capacidad_MW": 250,
+    "lat": 7.125,
+    "lng": -73.119
   },
   {
     "nombre": "Termoemcali",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 200,
-    "lat": 3.450,
-    "lng": -76.533
+    "capacidad_MW": 230,
+    "lat": 3.437,
+    "lng": -76.529
   },
   {
-    "nombre": "TermoPalmira",
+    "nombre": "Gecelca 3",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 200,
-    "lat": 3.550,
-    "lng": -76.300
+    "capacidad_MW": 164,
+    "lat": 9.248,
+    "lng": -75.358
   },
   {
-    "nombre": "Termoflores",
+    "nombre": "Flores II",
     "tipo": "Termoeléctrica",
     "capacidad_MW": 450,
-    "lat": 10.950,
-    "lng": -74.833
+    "lat": 10.978,
+    "lng": -74.828
   },
   {
-    "nombre": "Termocartagena",
+    "nombre": "Termosierra",
     "tipo": "Termoeléctrica",
-    "capacidad_MW": 200,
-    "lat": 10.400,
-    "lng": -75.500
+    "capacidad_MW": 180,
+    "lat": 10.850,
+    "lng": -75.000
+  },
+  {
+    "nombre": "TermoEDR",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 20,
+    "lat": 4.500,
+    "lng": -73.500
+  },
+  {
+    "nombre": "Termoproyectos",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 20,
+    "lat": 4.600,
+    "lng": -73.600
+  },
+  {
+    "nombre": "Termorubiales",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 20,
+    "lat": 4.700,
+    "lng": -73.700
+  },
+  {
+    "nombre": "Termojagüey",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 20,
+    "lat": 4.800,
+    "lng": -73.800
+  },
+  {
+    "nombre": "Termoyopal",
+    "tipo": "Termoeléctrica",
+    "capacidad_MW": 100,
+    "lat": 5.900,
+    "lng": -72.400
   }
 ]
