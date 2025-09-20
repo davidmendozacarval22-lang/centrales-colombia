@@ -1,0 +1,130 @@
+[
+  {
+    "nombre": "Hidroituango",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 2400,
+    "lat": 7.117,
+    "lng": -75.737,
+    "fuente": "Proyecto Hidroituango / EPM"
+  },
+  {
+    "nombre": "San Carlos",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 1240,
+    "lat": 6.2108,
+    "lng": -74.8406,
+    "fuente": "ISAGEN / Wikipedia"  
+  },
+  {
+    "nombre": "Guavio (Alberto Lleras)",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 1260,
+    "lat": 4.6943,
+    "lng": -73.5089,
+    "fuente": "Wikipedia / Upme"
+  },
+  {
+    "nombre": "Chivor",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 1000,
+    "lat": 5.166667,
+    "lng": -73.25,
+    "fuente": "EMGESA / Wikipedia"
+  },
+  {
+    "nombre": "Hidrosogamoso",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 820,
+    "lat": 5.71667,
+    "lng": -72.92083,
+    "fuente": "ISAGEN / Wikipedia"
+  },
+  {
+    "nombre": "Miel I (Pantágoras)",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 396,
+    "lat": 5.56056,
+    "lng": -74.88667,
+    "fuente": "ISAGEN / Wikipedia"
+  },
+  {
+    "nombre": "El Peñol - Guatapé",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 560,
+    "lat": 6.3201,
+    "lng": -75.1659,
+    "fuente": "EPM / Wikipedia"
+  },
+  {
+    "nombre": "Betania",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 540,
+    "lat": 3.8608,
+    "lng": -75.0167,
+    "fuente": "EPM / Wikipedia"
+  },
+  {
+    "nombre": "Salvajina",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 270,
+    "lat": 3.48,
+    "lng": -76.42,
+    "fuente": "Celsia / Wikipedia"
+  },
+  {
+    "nombre": "El Quimbo",
+    "tipo": "Hidroeléctrica",
+    "capacidad_mw": 400,
+    "lat": 2.45061,
+    "lng": -75.56293,
+    "fuente": "EMGESA / Wikipedia"
+  },
+  {
+    "nombre": "Termobarranquilla (TEBSA)",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 918,
+    "lat": 10.9685,
+    "lng": -74.7813,
+    "fuente": "XM / ANDG"
+  },
+  {
+    "nombre": "Termoguajira",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 709,
+    "lat": 11.407,
+    "lng": -72.146,
+    "fuente": "GECELCA / registros"
+  },
+  {
+    "nombre": "Termocandelaria",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 314,
+    "lat": 10.391,
+    "lng": -75.4794,
+    "fuente": "Operador / Wikipedia"
+  },
+  {
+    "nombre": "Termocentro (Valle)",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 272,
+    "lat": 3.4372,
+    "lng": -76.5235,
+    "fuente": "ISAGEN / Wikipedia"
+  },
+  {
+    "nombre": "Termopaipa",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 160,
+    "lat": 5.5,
+    "lng": -73.2,
+    "fuente": "XM / registros"
+  },
+  {
+    "nombre": "Termozipa",
+    "tipo": "Termoeléctrica",
+    "capacidad_mw": 235.5,
+    "lat": 4.9,
+    "lng": -74.1,
+    "fuente": "Wikipedia"
+  }
+]
