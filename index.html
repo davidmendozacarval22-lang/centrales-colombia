@@ -1,131 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centrales Eléctricas de Colombia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantas Eléctricas Colombia</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #f4f7f9;
+    body { margin:0; font-family: Arial, sans-serif; }
+    h1 {
+      text-align:center;
+      font-size:2rem;
+      margin:20px 0;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color:white;
+      padding:10px;
+      border-radius:15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-
-    header {
-      text-align: center;
-      padding: 15px;
-      background: linear-gradient(135deg, #0077ff, #00c4ff);
-      color: white;
-      font-size: 1.6em;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #map {
-      width: 100%;
-      height: 100dvh; /* móviles modernos */
-      height: calc(100vh - 70px); /* fallback */
-    }
-
-    .legend {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: white;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    .legend div {
-      margin: 5px 0;
-    }
-
-    .legend span {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      margin-right: 8px;
-      border-radius: 50%;
+    #map { width: 100%; height: 90vh; }
+    @media(max-width: 768px) {
+      h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <header>Centrales Hidroeléctricas y Termoeléctricas de Colombia</header>
-  <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // --- Inicializar mapa ---
-    const map = L.map("map").setView([4.6, -74.1], 6);
+<h1>Plantas Hidroeléctricas y Termoeléctricas de Colombia</h1>
+<div id="map"></div>
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors",
-    }).addTo(map);
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script>
+  // Crear mapa
+  const map = L.map('map').setView([4.5, -74], 6);
 
-    // --- Color según tipo ---
-    function getColor(tipo) {
-      return tipo === "Hidroeléctrica" ? "#007bff" : "#ff4d4d";
-    }
+  // Tiles OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
 
-    // --- Cargar plantas desde JSON ---
-    fetch("plants.json")
-      .then((res) => res.json())
-      .then((plantsData) => {
-        plantsData.forEach((plant) => {
-          const circle = L.circleMarker([plant.lat, plant.lng], {
-            radius: 8,
-            fillColor: getColor(plant.tipo),
-            color: "#333",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.85,
-          }).addTo(map);
+  // Marker Cluster
+  const markers = L.markerClusterGroup();
 
-          circle.bindPopup(
-            `<b>${plant.nombre}</b><br>` +
-              `Tipo: ${plant.tipo}<br>` +
-              `Capacidad: ${plant.capacidad_MW || "No disponible"} MW`
-          );
-        });
-      })
-      .catch((err) => console.error("Error cargando plants.json:", err));
+  // Cargar JSON de plantas
+  fetch('plants.json')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(plant => {
+        const color = plant.tipo === 'Hidroeléctrica' ? 'blue' : 'red';
+        const radius = window.innerWidth < 768 ? 6 : 8;
 
-    // --- Leyenda ---
-    const legend = L.control({ position: "bottomleft" });
-    legend.onAdd = function () {
-      const div = L.DomUtil.create("div", "legend");
-      div.innerHTML =
-        '<div><span style="background:#007bff"></span>Hidroeléctrica</div>' +
-        '<div><span style="background:#ff4d4d"></span>Termoeléctrica</div>';
-      return div;
-    };
-    legend.addTo(map);
-    fetch('plants.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(plant => {
-      let color = plant.tipo === 'Hidroeléctrica' ? 'blue' : 'red';
-      let marker = L.circleMarker([plant.lat, plant.lng], {
-        color: color,
-        radius: 8,
-        fillOpacity: 0.7
-      }).addTo(map);
-      marker.bindPopup(`
-        <b>${plant.nombre}</b><br>
-        Tipo: ${plant.tipo}<br>
-        Capacidad: ${plant.capacidad_MW} MW
-      `);
-    });
-  })
-  .catch(error => console.error('Error al cargar los datos:', error));
+        const marker = L.circleMarker([plant.lat, plant.lng], {
+          color: color,
+          radius: radius,
+          fillOpacity: 0.7
+        }).bindPopup(`
+          <b>${plant.nombre}</b><br>
+          Tipo: ${plant.tipo}<br>
+          Capacidad: ${plant.capacidad_MW} MW
+        `);
 
-  </script>
+        markers.addLayer(marker);
+      });
+
+      map.addLayer(markers);
+      map.fitBounds(markers.getBounds()); // Ajusta el mapa para ver todos los marcadores
+    })
+    .catch(error => console.error('Error al cargar los datos:', error));
+</script>
+
 </body>
 </html>
-
