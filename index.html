@@ -5,6 +5,7 @@
   <title>Mapa de Centrales Eléctricas en Colombia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.css"/>
   <style>
     html, body {
       height: 100%;
@@ -16,33 +17,100 @@
       width: 100%;
     }
 
-    /* Popups más legibles */
-    .leaflet-popup-content {
-      font-size: 1rem;
-      line-height: 1.4;
+    /* --- TÍTULO MODERNO --- */
+    header {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #0077ff, #ff3333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+      z-index: 1000;
+      text-align: center;
+      padding: 0 10px;
     }
 
-    /* Estilos de los círculos */
+    /* Círculos personalizados */
+    .marker-circle {
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      border: 2px solid white;
+      transform: translate(-11px, -11px);
+    }
     .hidro {
       background: #0077ff;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      border: 2px solid white;
     }
     .termo {
       background: #ff3333;
-      border-radius: 50%;
+    }
+
+    /* Popups legibles */
+    .leaflet-popup-content {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* En celulares, aumentar tamaño */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.4rem;
+        top: 10px;
+      }
+      .marker-circle {
+        width: 32px;
+        height: 32px;
+        transform: translate(-16px, -16px);
+      }
+      .leaflet-popup-content {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Leyenda */
+    .legend {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: white;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .legend span {
+      display: inline-block;
       width: 16px;
       height: 16px;
-      border: 2px solid white;
+      margin-right: 6px;
+      border-radius: 50%;
+      border: 1px solid #999;
     }
   </style>
 </head>
 <body>
+  <!-- Título vanguardista -->
+  <header>⚡ Centrales Eléctricas de Colombia ⚡</header>
+
   <div id="map"></div>
+  <div class="legend">
+    <div><span style="background:#0077ff"></span> Hidroeléctrica</div>
+    <div><span style="background:#ff3333"></span> Termoeléctrica</div>
+  </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.js"></script>
   <script>
     // Inicializar mapa
     var map = L.map('map').setView([4.5709, -74.2973], 6);
@@ -52,13 +120,18 @@
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Función para crear marcador con color
+    // Función para crear marcadores personalizados
     function marcadorPersonalizado(tipo) {
       return L.divIcon({
-        className: tipo === "Hidroeléctrica" ? "hidro" : "termo",
-        iconSize: [16, 16]
+        className: 'marker-circle ' + (tipo === "Hidroeléctrica" ? "hidro" : "termo"),
+        iconSize: [22, 22],
+        popupAnchor: [0, -11]
       });
     }
+
+    // Grupo para almacenar marcadores
+    var markersLayer = new L.LayerGroup();
+    map.addLayer(markersLayer);
 
     // Cargar datos desde plants.json
     fetch('plants.json')
@@ -66,15 +139,29 @@
       .then(data => {
         data.forEach(planta => {
           if (planta.lat && planta.lng) {
-            L.marker([planta.lat, planta.lng], {
-              icon: marcadorPersonalizado(planta.tipo)
+            var marker = L.marker([planta.lat, planta.lng], {
+              icon: marcadorPersonalizado(planta.tipo),
+              title: planta.nombre
             })
-            .addTo(map)
             .bindPopup(`<b>${planta.nombre}</b><br>
                         Tipo: ${planta.tipo}<br>
                         Capacidad: ${planta.capacidad_mw || 'N/D'} MW`);
+
+            markersLayer.addLayer(marker);
           }
         });
+
+        // Control de búsqueda
+        var searchControl = new L.Control.Search({
+          layer: markersLayer,
+          propertyName: 'title',
+          marker: false,
+          moveToLocation: function(latlng, title, map) {
+            map.setView(latlng, 10);
+          }
+        });
+
+        map.addControl(searchControl);
       });
   </script>
 </body>
