@@ -93,7 +93,8 @@
           circle.bindPopup(
             `<b>${plant.nombre}</b><br>` +
               `Tipo: ${plant.tipo}<br>` +
-              `Capacidad: ${plant.capacidad_MW} MW`
+             // `Capacidad: ${plant.capacidad_MW} MW`
+            `Capacidad: ${plant.capacidad_MW || plant.capacidad || "No disponible"} MW`
           );
         });
       });
@@ -111,3 +112,4 @@
   </script>
 </body>
 </html>
+
