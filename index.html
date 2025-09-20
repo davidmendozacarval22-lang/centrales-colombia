@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hidroeléctricas y Termoeléctricas de Colombia</title>
+  <title>Centrales Eléctricas de Colombia</title>
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet/dist/leaflet.css"
@@ -13,23 +13,27 @@
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f7f9;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
 
     header {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       background: linear-gradient(135deg, #0077ff, #00c4ff);
       color: white;
-      font-size: 1.8em;
+      font-size: 1.6em;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      flex: 0 0 auto;
     }
 
     #map {
+      flex: 1 1 auto;
       width: 100%;
-      height: calc(100vh - 80px);
     }
 
     .legend {
@@ -93,12 +97,12 @@
           circle.bindPopup(
             `<b>${plant.nombre}</b><br>` +
               `Tipo: ${plant.tipo}<br>` +
-            `Capacidad: ${plant.capacidad_MW || plant.capacidad || "No disponible"} MW`
-
-);
-            
+              `Capacidad: ${plant.capacidad_MW || plant.capacidad || "No disponible"} MW`
           );
         });
+      })
+      .catch((err) => {
+        console.error("Error cargando plants.json:", err);
       });
 
     // Agregar leyenda
@@ -114,5 +118,3 @@
   </script>
 </body>
 </html>
-
-
