@@ -106,6 +106,26 @@
       return div;
     };
     legend.addTo(map);
+    fetch('plants.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(plant => {
+      let color = plant.tipo === 'Hidroeléctrica' ? 'blue' : 'red';
+      let marker = L.circleMarker([plant.lat, plant.lng], {
+        color: color,
+        radius: 8,
+        fillOpacity: 0.7
+      }).addTo(map);
+      marker.bindPopup(`
+        <b>${plant.nombre}</b><br>
+        Tipo: ${plant.tipo}<br>
+        Capacidad: ${plant.capacidad_MW} MW
+      `);
+    });
+  })
+  .catch(error => console.error('Error al cargar los datos:', error));
+
   </script>
 </body>
 </html>
+
