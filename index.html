@@ -3,75 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <title>Mapa de Centrales Eléctricas en Colombia</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; }
-    #map { width: 100%; height: 100%; }
-    .filter-box {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 1000;
-      background: white;
-      padding: 8px;
-      border-radius: 8px;
-      font-family: Arial, sans-serif;
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    /* Popups más legibles */
+    .leaflet-popup-content {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Estilos de los círculos */
+    .hidro {
+      background: #0077ff;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      border: 2px solid white;
+    }
+    .termo {
+      background: #ff3333;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      border: 2px solid white;
     }
   </style>
 </head>
 <body>
-  <div class="filter-box">
-    <label><input type="checkbox" id="hidro" checked> Hidroeléctricas</label><br>
-    <label><input type="checkbox" id="termo" checked> Termoeléctricas</label>
-  </div>
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    const map = L.map('map').setView([4.6, -74.1], 6);
+    // Inicializar mapa
+    var map = L.map('map').setView([4.5709, -74.2973], 6);
 
+    // Fondo OSM
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '© OpenStreetMap contributors'
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    let markers = [];
-
-    // Función para cargar datos dinámicamente
-    async function loadPlants() {
-      const response = await fetch('plants.json');
-      const data = await response.json();
-      renderPlants(data);
-    }
-
-    function renderPlants(plants) {
-      // limpiar marcadores anteriores
-      markers.forEach(m => map.removeLayer(m));
-      markers = [];
-
-      const showHidro = document.getElementById('hidro').checked;
-      const showTermo = document.getElementById('termo').checked;
-
-      plants.forEach(plant => {
-        if ((plant.tipo === "Hidroeléctrica" && showHidro) ||
-            (plant.tipo === "Termoeléctrica" && showTermo)) {
-          const marker = L.marker([plant.lat, plant.lng]).addTo(map);
-          marker.bindPopup(
-            `<b>${plant.nombre}</b><br>
-             Tipo: ${plant.tipo}<br>
-             Capacidad: ${plant.capacidad_mw} MW<br>
-             Fuente: ${plant.fuente}`
-          );
-          markers.push(marker);
-        }
+    // Función para crear marcador con color
+    function marcadorPersonalizado(tipo) {
+      return L.divIcon({
+        className: tipo === "Hidroeléctrica" ? "hidro" : "termo",
+        iconSize: [16, 16]
       });
     }
 
-    // recargar al cambiar filtros
-    document.getElementById('hidro').addEventListener('change', loadPlants);
-    document.getElementById('termo').addEventListener('change', loadPlants);
-
-    loadPlants();
+    // Cargar datos desde plants.json
+    fetch('plants.json')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(planta => {
+          if (planta.lat && planta.lng) {
+            L.marker([planta.lat, planta.lng], {
+              icon: marcadorPersonalizado(planta.tipo)
+            })
+            .addTo(map)
+            .bindPopup(`<b>${planta.nombre}</b><br>
+                        Tipo: ${planta.tipo}<br>
+                        Capacidad: ${planta.capacidad_mw || 'N/D'} MW`);
+          }
+        });
+      });
   </script>
 </body>
 </html>
