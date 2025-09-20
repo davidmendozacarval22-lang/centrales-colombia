@@ -21,27 +21,6 @@
     "lng": -73.365
   },
   {
-    "nombre": "Jaguas",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 170,
-    "lat": 6.358,
-    "lng": -75.062
-  },
-  {
-    "nombre": "Playas",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 204,
-    "lat": 6.237,
-    "lng": -75.046
-  },
-  {
-    "nombre": "Miel I",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 396,
-    "lat": 5.449,
-    "lng": -74.894
-  },
-  {
     "nombre": "Porce II",
     "tipo": "Hidroeléctrica",
     "capacidad_MW": 405,
@@ -63,13 +42,6 @@
     "lng": -75.100
   },
   {
-    "nombre": "Urrá I",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 340,
-    "lat": 8.047,
-    "lng": -76.051
-  },
-  {
     "nombre": "Betania",
     "tipo": "Hidroeléctrica",
     "capacidad_MW": 540,
@@ -77,32 +49,11 @@
     "lng": -75.478
   },
   {
-    "nombre": "Calima",
+    "nombre": "Urrá I",
     "tipo": "Hidroeléctrica",
-    "capacidad_MW": 120,
-    "lat": 3.900,
-    "lng": -76.600
-  },
-  {
-    "nombre": "Anchicayá",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 165,
-    "lat": 3.800,
-    "lng": -76.900
-  },
-  {
-    "nombre": "Salvajina",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 270,
-    "lat": 2.771,
-    "lng": -76.817
-  },
-  {
-    "nombre": "Amoyá",
-    "tipo": "Hidroeléctrica",
-    "capacidad_MW": 80,
-    "lat": 3.583,
-    "lng": -75.667
+    "capacidad_MW": 340,
+    "lat": 8.047,
+    "lng": -76.051
   },
   {
     "nombre": "Quimbo",
@@ -112,6 +63,13 @@
     "lng": -75.500
   },
   {
+    "nombre": "Salvajina",
+    "tipo": "Hidroeléctrica",
+    "capacidad_MW": 270,
+    "lat": 2.771,
+    "lng": -76.817
+  },
+  {
     "nombre": "Termocandelaria",
     "tipo": "Termoeléctrica",
     "capacidad_MW": 314,
@@ -119,7 +77,7 @@
     "lng": -75.479
   },
   {
-    "nombre": "Termobarranquilla (Tebsa)",
+    "nombre": "Termobarranquilla",
     "tipo": "Termoeléctrica",
     "capacidad_MW": 890,
     "lat": 10.963,
@@ -180,40 +138,5 @@
     "capacidad_MW": 180,
     "lat": 10.850,
     "lng": -75.000
-  },
-  {
-    "nombre": "TermoEDR",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 20,
-    "lat": 4.500,
-    "lng": -73.500
-  },
-  {
-    "nombre": "Termoproyectos",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 20,
-    "lat": 4.600,
-    "lng": -73.600
-  },
-  {
-    "nombre": "Termorubiales",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 20,
-    "lat": 4.700,
-    "lng": -73.700
-  },
-  {
-    "nombre": "Termojagüey",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 20,
-    "lat": 4.800,
-    "lng": -73.800
-  },
-  {
-    "nombre": "Termoyopal",
-    "tipo": "Termoeléctrica",
-    "capacidad_MW": 100,
-    "lat": 5.900,
-    "lng": -72.400
   }
 ]
