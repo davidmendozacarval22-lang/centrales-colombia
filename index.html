@@ -122,19 +122,23 @@ DATA.plants.forEach(raw=>{
   }
   const opts = markerOptionsByType(p.type);
   const marker = L.circleMarker([p.lat, p.lon], opts).addTo(map);
-  const popupParts = [
-  `<strong>${p.name || p.nombre || '(sin nombre)'}</strong>`,
-  `Tipo: ${p.type || p.tipo || '(sin tipo)'}`,
-  (p.departamento ? `Departamento: ${p.departamento}` : ''),
-  (p.municipio ? `Municipio: ${p.municipio}` : ''),
-  (p.potencia || p.capacidad_MW ? `Potencia: ${p.potencia || p.capacidad_MW} MW` : ''),
-  (p.year || p.año ? `Año: ${p.year || p.año}` : ''),
-  (p.rio || p.río ? `Río: ${p.rio || p.río}` : ''),
-  (p.fuel || p.combustible ? `Combustible: ${p.fuel || p.combustible}` : ''),
-  (p.lat && (p.lon || p.lng) ? `Coordenadas: ${p.lat}, ${p.lon || p.lng}` : '')
-].filter(Boolean).join('<br>');
+  const popupHTML = `
+  <div style="font-family: Arial; font-size: 13px;">
+    <h4 style="margin: 0; font-size: 15px; color:${(p.type || p.tipo) === 'Hidroeléctrica' ? 'darkred' : 'darkblue'};">
+      ${p.name || p.nombre || '(sin nombre)'}
+    </h4>
+    <b>Tipo:</b> ${p.type || p.tipo || '(sin tipo)'}<br>
+    ${p.departamento ? `<b>Departamento:</b> ${p.departamento}<br>` : ''}
+    ${p.municipio ? `<b>Municipio:</b> ${p.municipio}<br>` : ''}
+    ${(p.potencia || p.capacidad_MW) ? `<b>Potencia:</b> ${p.potencia || p.capacidad_MW} MW<br>` : ''}
+    ${(p.year || p.año) ? `<b>Año:</b> ${p.year || p.año}<br>` : ''}
+    ${(p.rio || p.río) ? `<b>Río:</b> ${p.rio || p.río}<br>` : ''}
+    ${(p.fuel || p.combustible) ? `<b>Combustible:</b> ${p.fuel || p.combustible}<br>` : ''}
+    ${(p.lat && (p.lon || p.lng)) ? `<small><i>Coordenadas:</i> ${p.lat}, ${p.lon || p.lng}</small>` : ''}
+  </div>
+`;
+marker.bindPopup(popupHTML);
 
-marker.bindPopup(popupParts);
 
 });
 
