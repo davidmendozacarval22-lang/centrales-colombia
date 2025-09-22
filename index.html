@@ -123,17 +123,19 @@ DATA.plants.forEach(raw=>{
   const opts = markerOptionsByType(p.type);
   const marker = L.circleMarker([p.lat, p.lon], opts).addTo(map);
   const popupParts = [
-    `<strong>${p.name || '(sin nombre)'}</strong>`,
-    `Tipo: ${p.type || '(sin tipo)'}`,
-    (p.departamento ? `Departamento: ${p.departamento}` : ''),
-    (p.municipio ? `Municipio: ${p.municipio}` : ''),
-    (p.potencia ? `Potencia: ${p.potencia} MW` : ''),
-    (p.year ? `Año: ${p.year}` : ''),
-    (p.rio ? `Río: ${p.rio}` : ''),
-    (p.fuel ? `Combustible: ${p.fuel}` : ''),
-    `Coordenadas: ${p.lat}, ${p.lon}`
-  ].filter(Boolean).join('<br>');
-  marker.bindPopup(popupParts);
+  `<strong>${p.name || p.nombre || '(sin nombre)'}</strong>`,
+  `Tipo: ${p.type || p.tipo || '(sin tipo)'}`,
+  (p.departamento ? `Departamento: ${p.departamento}` : ''),
+  (p.municipio ? `Municipio: ${p.municipio}` : ''),
+  (p.potencia || p.capacidad_MW ? `Potencia: ${p.potencia || p.capacidad_MW} MW` : ''),
+  (p.year || p.año ? `Año: ${p.year || p.año}` : ''),
+  (p.rio || p.río ? `Río: ${p.rio || p.río}` : ''),
+  (p.fuel || p.combustible ? `Combustible: ${p.fuel || p.combustible}` : ''),
+  (p.lat && (p.lon || p.lng) ? `Coordenadas: ${p.lat}, ${p.lon || p.lng}` : '')
+].filter(Boolean).join('<br>');
+
+marker.bindPopup(popupParts);
+
 });
 
 /* ====== Leyenda fija (inferior derecha) ====== */
